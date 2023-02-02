@@ -1,37 +1,62 @@
+<!-- A simple website demostrating interactive navigation and image effects
+        Author: Zeik Cookson-Ludwig 
+        Date  : 2023-01-30 -->
+
 <!DOCTYPE html>
 <html lang="en">
-<html lang="en">
-	<head>
-		<!--Site Designed by Zeik Cookson-->
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>home</title>
-		<link rel="stylesheet" href="Styles.css">
-		<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;700&family=Roboto:wght@100;300;400;500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-	</head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Website - Zeik Cookson</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container border">
+        
+        <div class="line"></div>
+
+        <div class="circles">
+            <a class="red circle" href="#"></a>
+            <a class="green circle" href="#"></a>
+            <a class="yellow circle" href="#"></a>
+        </div>
+
+        <div class="card-flex">
+
+            <div class="card-container border">
+                <div class="card border">
+                    <img id="myImg" src="assets/rocket.jpg" alt="Rocket illustration">
+                </div>
+            </div>
+
+            <div class="card-container border">
+                <div class="card border">  
+                    <img id="myImg" src="assets/robot.jpg" alt="Robot illustration">
+                </div>
+            </div>
+
+            <div class="card-container border">
+                <div class="card border">
+                    <img id="myImg" src="assets/mcd.jpg" alt="Futuristic illustration of McDonalds">
+                </div>
+            </div>
+
+            <!-- The Modal -->
+            <div class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+
+        </div>
+    </div>
 
 
-	<body>
-		<div class="page grid-container-home">
-				<div class="nav grid-item-nav">
-					<a href="/index.html">home</a>
-					<a href="/Pizza.html">pizza</a>
-					<a href="/Fave-Type.html">type</a>
-					<a href="/Pandas.html">pandas</a>
-					<a href="/Truth.html">yay or nay</a> 
-				</div>
-			
-			<div class="big-guy grid-welcome">
-				<h1>WELCOME</h1>
-			</div>
 
-			<div class="welcome grid-p">
-				<p>I carefully constructed this site for your particular pleasure so we can comfortably concur on my capability of the critical concepts of web development fundamentals.	</p>
-			</div>
-			
-			<div class="avatar grid-hero">
-				<img class="Hero" src="/Images/avatar2.jpg" alt="lil devil guy">
-			</div>
-		</div>
-	</body>
+    <script src="app.js"></script>
+</body>
 </html>
