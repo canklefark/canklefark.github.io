@@ -12,65 +12,70 @@
 
 body {
     background: #F2A3A3;
+    min-width: 340px;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+h1 {
+    font-size: 2rem;
 }
 
 .border {
     border: var(--main-border);
-    border-radius: 30px;
 }
 
-.container {
+.nav {
     background-color: var(--beige);
-    width: 946px;
-    height: 646px;
+    border-radius: 30px 30px 0px 0px;
     box-shadow: 16px 16px var(--black);
-    
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 3fr auto 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    width: 970px;
+    height: 30vh;
+    max-width: 946px;
+    max-height: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.line{
-    width: 940px;
-    height: 78px;
-    border-bottom: 4px solid var(--black);
-    position: absolute;
+.home {
+    padding-left: 5%;
+}
+
+.fa-solid,
+.fa-home {
+    color: var(--black);
+    font-size: 1.5rem;
 }
 
 .circles {
-    width: fit-content;
-    height: 35px; 
-    position: absolute;
-    top: 20px;
-    right: 64px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5%;
+    gap: 7px;
 }
 
 .circle {
-    display: inline-block;
     width: 31px;
     height: 31px;
     border: 4px solid var(--black);
-    border-radius: 50%; 
-    padding: 13px;
+    border-radius: 50%;
     cursor: pointer;
 }
 
-.circle:hover,
-.circle:focus {
-    /* hover effect from: https://codepen.io/giana/pen/BZaGyP */
+.press:hover,
+.press:focus {
+/* hover effect from: https://codepen.io/giana/pen/BZaGyP */
     box-shadow: 0 0.5em 0.5em -0.4em var(--black);
     transform: translateY(-0.25em);
 }
 
-.circle:active {
+.press:active {
     transform: scale(0.8);
 }
 
@@ -86,23 +91,36 @@ body {
     background-color: #FEBE2E;
 }
 
+.container {
+    background-color: var(--beige);
+    border-radius: 0px 0px 30px 30px;
+    box-shadow: 16px 16px var(--black);
+    width: 970px;
+    height: 90vh;
+    max-width: 946px;
+    max-height: 568px;
+    display: flex;
+}
+
 .card-flex {
-    width: 882px;
-    height: 495px;
-    grid-area: 2 / 1 / 3 / 2;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin: auto;
-    top: 50vh;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
 }
 
 .card-container {
     background-color: var(--beige);
+    border-radius: 30px;
+    box-shadow: 8px 8px var(--black);
     width: 250px;
     height: 495px;
+    margin: 1rem;
     display: flex;
-    box-shadow: 8px 8px var(--black);
+
 }
 
 .card {
@@ -115,7 +133,7 @@ body {
 }
 
 .card img {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     object-fit: cover;
     transition: .2s linear;
@@ -154,12 +172,12 @@ https://www.w3schools.com/howto/howto_css_modal_images.asp */
 @-webkit-keyframes zoom {
     from {-webkit-transform:scale(0)} 
     to {-webkit-transform:scale(1)}
-  }
+}
   
 @keyframes zoom {
     from {transform:scale(0)} 
     to {transform:scale(1)}
-  }
+}
   
 /* The Close Button */
 .close {
@@ -170,12 +188,17 @@ https://www.w3schools.com/howto/howto_css_modal_images.asp */
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
-  }
+}
   
 .close:hover,
 .close:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
+.note {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
