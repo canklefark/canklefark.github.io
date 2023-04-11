@@ -1,204 +1,50 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --black: rgb(12, 9, 4);
-    --beige: #FCF4E7;
-    --main-border: 5px solid var(--black);
-}
-
-body {
-    background: #F2A3A3;
-    min-width: 340px;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-family: 'Ubuntu Mono', monospace;
-}
-
-h1 {
-    font-size: 2rem;
-}
-
-.border {
-    border: var(--main-border);
-}
-
-.nav {
-    background-color: var(--beige);
-    border-radius: 30px 30px 0px 0px;
-    box-shadow: 16px 16px var(--black);
-    width: 970px;
-    height: 30vh;
-    max-width: 946px;
-    max-height: 78px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.home {
-    padding-left: 5%;
-}
-
-.fa-solid,
-.fa-home {
-    color: var(--black);
-    font-size: 1.5rem;
-}
-
-.circles {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 5%;
-    gap: 7px;
-}
-
-.circle {
-    width: 31px;
-    height: 31px;
-    border: 4px solid var(--black);
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.press:hover,
-.press:focus {
-/* hover effect from: https://codepen.io/giana/pen/BZaGyP */
-    box-shadow: 0 0.5em 0.5em -0.4em var(--black);
-    transform: translateY(-0.25em);
-}
-
-.press:active {
-    transform: scale(0.8);
-}
-
-.red {
-    background-color: #FF5E5B;
-}
-
-.green {
-    background-color: #2BCB45;
-}
-
-.yellow {
-    background-color: #FEBE2E;
-}
-
-.container {
-    background-color: var(--beige);
-    border-radius: 0px 0px 30px 30px;
-    box-shadow: 16px 16px var(--black);
-    width: 970px;
-    height: 90vh;
-    max-width: 946px;
-    max-height: 568px;
-    display: flex;
-}
-
-.card-flex {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
-    position: relative;
-}
-
-.card-container {
-    background-color: var(--beige);
-    border-radius: 30px;
-    box-shadow: 8px 8px var(--black);
-    width: 250px;
-    height: 495px;
-    margin: 1rem;
-    display: flex;
-
-}
-
-.card {
-    width: 219px;
-    height: 465px;
-    margin: auto;
-    border-radius: 20px;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.card img {
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: .2s linear;
-}
-
-.card:hover img {
-    transform: scale(1.1);
-}
-
-.modal {
-    background-color: rgba(12, 9, 4, .8);
+    font-family: monospace;
+  }
+  
+  body {
+    background-color: darkolivegreen;
+  }
+  
+  #text {
+    background-color: #161616;
+    color: white;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+  }
+  
+  #game {
+    max-width: 600px;
+    max-height: 400px;
+    background-color: lightgray;
+    color: white;
+    margin: 0 auto;
+    padding: 10px;
+    box-shadow: 8px 8px #161616;
+    border: 2px solid #161616;
+    border-radius: 10px;
+  }
+  
+  #controls {
+    border: 1px #161616 solid;
+    padding: 5px;
+  }
+  
+  #stats {
+    border: 1px #161616 solid;
+    color: #161616;
+    padding: 5px;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  #monsterStats {
     display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-}
-
-/* Most of the code from 142 - 181 comes from: 
-https://www.w3schools.com/howto/howto_css_modal_images.asp */
-.modal-content {
-    margin: 2rem auto;
-    display: block;
-    border: var(--main-border);
-    border-radius: 30px;
-    height: 90%; 
-    max-height: 800px;
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} 
-    to {-webkit-transform:scale(1)}
-}
+    border: 1px #161616 solid;
+    color: white;
+    padding: 5px;
+    background-color: red;
+  }
   
-@keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
-}
-  
-/* The Close Button */
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-  
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.note {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-}
+  .stat {
+    padding-right: 10px;
+  }

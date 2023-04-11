@@ -1,64 +1,31 @@
-<!-- A simple website demostrating interactive navigation and image effects
-        Author: Zeik Cookson-Ludwig 
-        Date  : 2023-01-30 -->
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Font awesome API for home icon -->
-    <script src="https://kit.fontawesome.com/5c84ae231e.js" crossorigin="anonymous"></script>
-    
-    <title>Website - Zeik Cookson</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>RPG - Dragon Repeller</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="nav border">
-        <a href="index.html" class="home"><i class="fa-solid fa-home press"></i></a>
-
-        <div class="circles">
-            <a class="red circle press" href="pages/red.html"></a>
-            <a class="green circle press" href="pages/green.html"></a>
-            <a class="yellow circle press" href="pages/yellow.html"></a>
-        </div>
-    </div>
-
-    <div class="container border"> 
-        <div class="card-flex">
-
-            <div class="card-container border">
-                <div class="card border">
-                    <img id="myImg" src="assets/rocket.jpg" alt="Rocket illustration">
-                </div>
-            </div>
-
-            <div class="card-container border">
-                <div class="card border">  
-                    <img id="myImg" src="assets/robot.jpg" alt="Robot illustration">
-                </div>
-            </div>
-
-            <div class="card-container border">
-                <div class="card border">
-                    <img id="myImg" src="assets/mcd.jpg" alt="Futuristic illustration of McDonalds">
-                </div>
-            </div>
-
-            <!-- The Modal -->
-            <div class="modal">
-                <span class="close">&times;</span>
-                <img class="modal-content" id="img01">
-                <div id="caption"></div>
-            </div>
-
-        </div>
-    </div>
-
-<!--Modal Script. Code from: https://www.youtube.com/watch?v=QghhoJBdw7A&t=311s-->
-    <script src="modal.js"></script>
+<div id="game">
+  <div id="stats">
+    <span class="stat">XP: <strong><span id="xpText">0</span></strong></span>
+    <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>
+    <span class="stat">Gold: <strong><span id="goldText">50</span></strong></span>
+  </div>
+  <div id="controls">
+    <button id="button1">Go to store</button>
+    <button id="button2">Go to cave</button>
+    <button id="button3">Fight dragon</button>
+  </div>
+  <div id="monsterStats">
+    <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
+    <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
+  </div>
+  <div id="text">Welcome to Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town. You are in the town square. Where do you want to go? Use the buttons above.</div>
+</div>
+<script  src="script.js"></script>
 </body>
+
 </html>
